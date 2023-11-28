@@ -65,9 +65,11 @@ class _LoginPageState extends State<LoginPage> {
                   child: SingleChildScrollView(
                     child: Form(
                       key: _loginFormKey,
-                      child:  Column(
-          
-                    mainAxisSize: MainAxisSize.min, // Add this line
+                      child:  Wrap(
+  spacing: 8.0, // gap between adjacent chips
+  runSpacing: 4.0, // gap between lines
+  direction: Axis.horizontal, // main axis (rows or columns)
+  alignment: WrapAlignment.center,
 
 
                         children: [
@@ -128,8 +130,11 @@ class _LoginPageState extends State<LoginPage> {
                           const SizedBox(height: 18,),
                           SizedBox(
                             width: size.width * 0.8,
-                            child:  Column(
-                        mainAxisSize: MainAxisSize.min, // Add this line
+                            child:  Wrap(
+  spacing: 8.0, // gap between adjacent chips
+  runSpacing: 4.0, // gap between lines
+  direction: Axis.horizontal, // main axis (rows or columns)
+alignment: WrapAlignment.center,
                               children: [
                                 const Text('Don\'t have an account ? ', style: TextStyle(fontSize: 13, color: Color(0xff939393), fontWeight: FontWeight.bold),),
                                 GestureDetector(
@@ -145,8 +150,11 @@ class _LoginPageState extends State<LoginPage> {
                            Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55.0),
                 
-                child:  Column(
-            
+                child:  Wrap(
+  spacing: 8.0, // gap between adjacent chips
+  runSpacing: 4.0, // gap between lines
+  direction: Axis.horizontal, // main axis (rows or columns)
+alignment: WrapAlignment.center,
 
                   children: [
 
@@ -336,4 +344,3 @@ class _LoginPageState extends State<LoginPage> {
 
 }
   
-
