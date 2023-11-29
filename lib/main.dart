@@ -34,39 +34,39 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 
 
 Future main() async {
-  WidgetsFlutterBinding.ensureInitialized(); 
+  //WidgetsFlutterBinding.ensureInitialized(); 
   await Firebase.initializeApp(
     options:  DefaultFirebaseOptions.currentPlatform,
 
 
   );
    // TODO: Request permission
-    final messaging = FirebaseMessaging.instance;
+   // final messaging = FirebaseMessaging.instance;
 
-final settings = await messaging.requestPermission(
- alert: true,
- announcement: false,
- badge: true,
- carPlay: false,
- criticalAlert: false,
- provisional: false,
- sound: true,
-);
+//final settings = await messaging.requestPermission(
+ //alert: true,
+ //announcement: false,
+ //badge: true,
+ //carPlay: false,
+ //criticalAlert: false,
+ //provisional: false,
+ //sound: true,
+//);
 
- if (kDebugMode) {
-   print('Permission granted: ${settings.authorizationStatus}');
- }
+ //if (kDebugMode) {
+   //print('Permission granted: ${settings.authorizationStatus}');
+ //}
 
- FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-    await initializeOtherClass();
+ //FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+   // await initializeOtherClass();
 
 // TODO: replace with your own VAPID key
- const vapidKey = "BDF8fXiJSDbqRhbvSSKo1dt2NmmTWr1RkVX2Hkl8pdBl_Svfy55x5ZLrObzZq0wTasTgcmySv3Ro7WBtsrB0kmM";
+ //const vapidKey = "BDF8fXiJSDbqRhbvSSKo1dt2NmmTWr1RkVX2Hkl8pdBl_Svfy55x5ZLrObzZq0wTasTgcmySv3Ro7WBtsrB0kmM";
 // use the registration token to send messages to users from your trusted server environment
- String? token;
+// String? token;
 
  /* if (DefaultFirebaseOptions.currentPlatform == DefaultFirebaseOptions.web) {
-   token = await messaging.getToken(
+  // token = await messaging.getToken(
      vapidKey: vapidKey,
    );
  } else {
@@ -82,37 +82,37 @@ final settings = await messaging.requestPermission(
 
 
  // TODO: Set up foreground message handler
- FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-   if (kDebugMode) {
-     print('Handling a foreground message: ${message.messageId}');
-     print('Message data: ${message.data}');
-     print('Message notification: ${message.notification?.title}');
-     print('Message notification: ${message.notification?.body}');
-   }
+// FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+   //if (kDebugMode) {
+  //   print('Handling a foreground message: ${message.messageId}');
+    // print('Message data: ${message.data}');
+    // print('Message notification: ${message.notification?.title}');
+    // print('Message notification: ${message.notification?.body}');
+   //}
 
-   _messageStreamController.sink.add(message);
- });
+  // _messageStreamController.sink.add(message);
+ //});
 
  // TODO: Set up background message handler
   // Configure Firebase Cloud Messaging
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  FirebaseMessaging messagings = FirebaseMessaging.instance;
+ // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+ // FirebaseMessaging messagings = FirebaseMessaging.instance;
 
   // Request permission for displaying notifications
-  await messagings.requestPermission();
+  //await messagings.requestPermission();
   
   // Obtain the FCM token
 
   // Register a callback for receiving messages
-  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+  //FirebaseMessaging.onMessage.listen((RemoteMessage message) {
     // Handle the incoming message
-  });
+  //});
 
   // Handle any initial notification after the app launch
-  RemoteMessage? initialMessage = await messaging.getInitialMessage();
-  if (initialMessage != null) {
+  //RemoteMessage? initialMessage = await messaging.getInitialMessage();
+  //if (initialMessage != null) {
     // Handle the initial message
-  }
+  //}
 
   runApp(const MyApp());
 
