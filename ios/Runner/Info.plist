@@ -27,7 +27,9 @@
     <string>4</string>
     <key>MinimumOSVersion</key>
     <string>11.0</string>
-    <key>UILaunchStoryboardName~ipad</key>
+<key>LSRequiresIPhoneOS</key>
+	<true/>    
+<key>UILaunchStoryboardName~ipad</key>
     
     <string>LaunchScreenIPad.storyboard</string>
     <key>UIRequiresFullScreen</key>
@@ -52,6 +54,15 @@
         <string>UIInterfaceOrientationLandscapeLeft</string>
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
+    <key>UISupportedInterfaceOrientations~ipad</key>
+    	<array>
+    		<string>UIInterfaceOrientationPortrait</string>
+    		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+    		<string>UIInterfaceOrientationLandscapeLeft</string>
+    		<string>UIInterfaceOrientationLandscapeRight</string>
+    	</array>
+    	<key>UIViewControllerBasedStatusBarAppearance</key>
+    	<false/>
     <key>NSPhotoLibraryUsageDescription</key>
     <string>We need access to your photo library to select images for sharing with friends.</string>
 
