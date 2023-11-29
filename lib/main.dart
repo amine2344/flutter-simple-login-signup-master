@@ -16,60 +16,60 @@ import 'package:flutter/foundation.dart';
 
 // FlutterFire's Firebase Cloud Messaging plugin
 
-//final _messageStreamController = BehaviorSubject<RemoteMessage>();
+final _messageStreamController = BehaviorSubject<RemoteMessage>();
 
 
-//Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   // If you're going to use other Firebase services in the background, such as Firestore,
   // make sure you call `initializeApp` before using other Firebase services.
-  //await Firebase.initializeApp();
-  //if (kDebugMode) {
-  // print("Handling a background message: ${message.messageId}");
-  // print('Message data: ${message.data}');
-  // print('Message notification: ${message.notification?.title}');
-  // print('Message notification: ${message.notification?.body}');
- //}
-//}
+  await Firebase.initializeApp();
+  if (kDebugMode) {
+   print("Handling a background message: ${message.messageId}");
+   print('Message data: ${message.data}');
+   print('Message notification: ${message.notification?.title}');
+   print('Message notification: ${message.notification?.body}');
+ }
+}
 
 
 
 Future main() async {
-  //WidgetsFlutterBinding.ensureInitialized(); 
-  //await Firebase.initializeApp(
-    //options:  DefaultFirebaseOptions.currentPlatform,
+  WidgetsFlutterBinding.ensureInitialized(); 
+  await Firebase.initializeApp(
+    options:  DefaultFirebaseOptions.currentPlatform,
 
 
-  //);
+  );
    // TODO: Request permission
-   // final messaging = FirebaseMessaging.instance;
+    final messaging = FirebaseMessaging.instance;
 
-//final settings = await messaging.requestPermission(
- //alert: true,
- //announcement: false,
- //badge: true,
- //carPlay: false,
- //criticalAlert: false,
- //provisional: false,
- //sound: true,
-//);
+final settings = await messaging.requestPermission(
+ alert: true,
+ announcement: false,
+ badge: true,
+ carPlay: false,
+ criticalAlert: false,
+ provisional: false,
+ sound: true,
+);
 
- //if (kDebugMode) {
-   //print('Permission granted: ${settings.authorizationStatus}');
- //}
+ if (kDebugMode) {
+   print('Permission granted: ${settings.authorizationStatus}');
+ }
 
- //FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-   // await initializeOtherClass();
+ FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+    await initializeOtherClass();
 
 // TODO: replace with your own VAPID key
- //const vapidKey = "BDF8fXiJSDbqRhbvSSKo1dt2NmmTWr1RkVX2Hkl8pdBl_Svfy55x5ZLrObzZq0wTasTgcmySv3Ro7WBtsrB0kmM";
+ const vapidKey = "BDF8fXiJSDbqRhbvSSKo1dt2NmmTWr1RkVX2Hkl8pdBl_Svfy55x5ZLrObzZq0wTasTgcmySv3Ro7WBtsrB0kmM";
 // use the registration token to send messages to users from your trusted server environment
-// String? token;
+ String? token;
 
  /* if (DefaultFirebaseOptions.currentPlatform == DefaultFirebaseOptions.web) {
-  // token = await messaging.getToken(
-    // vapidKey: vapidKey,
-   //);
- //} else {
+   token = await messaging.getToken(
+     vapidKey: vapidKey,
+   );
+ } else {
    token = await messaging.getToken();
  }
 
@@ -82,37 +82,37 @@ Future main() async {
 
 
  // TODO: Set up foreground message handler
-// FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-   //if (kDebugMode) {
-  //   print('Handling a foreground message: ${message.messageId}');
-    // print('Message data: ${message.data}');
-    // print('Message notification: ${message.notification?.title}');
-    // print('Message notification: ${message.notification?.body}');
-   //}
+ FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+   if (kDebugMode) {
+     print('Handling a foreground message: ${message.messageId}');
+     print('Message data: ${message.data}');
+     print('Message notification: ${message.notification?.title}');
+     print('Message notification: ${message.notification?.body}');
+   }
 
-  // _messageStreamController.sink.add(message);
- //});
+   _messageStreamController.sink.add(message);
+ });
 
  // TODO: Set up background message handler
   // Configure Firebase Cloud Messaging
- // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
- // FirebaseMessaging messagings = FirebaseMessaging.instance;
+  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  FirebaseMessaging messagings = FirebaseMessaging.instance;
 
   // Request permission for displaying notifications
-  //await messagings.requestPermission();
+  await messagings.requestPermission();
   
   // Obtain the FCM token
 
   // Register a callback for receiving messages
-  //FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
     // Handle the incoming message
-  //});
+  });
 
   // Handle any initial notification after the app launch
-  //RemoteMessage? initialMessage = await messaging.getInitialMessage();
-  //if (initialMessage != null) {
+  RemoteMessage? initialMessage = await messaging.getInitialMessage();
+  if (initialMessage != null) {
     // Handle the initial message
-  //}
+  }
 
   runApp(const MyApp());
 
@@ -121,8 +121,8 @@ Future main() async {
 }
 Future<void> initializeOtherClass() async {
   // Perform any initialization tasks here
-  //await ListEvents.initialise() ; 
- // await Future.delayed(const Duration(seconds: 2)); // Simulated initialization delay
+  await ListEvents.initialise() ; 
+  await Future.delayed(const Duration(seconds: 2)); // Simulated initialization delay
   
   
 }
@@ -178,7 +178,7 @@ class _MyAppWithSplashState extends State<MyAppWithSplash> {
       future: main(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          return const EADashedBoardScreen(); // Navigate to EADashedBoardScreen after initialization
+          return const AuthPage(); // Navigate to AuthPage after initialization
         } else {
           return const SplashScreen(); // Show SplashScreen while initializing
         }
@@ -190,7 +190,13 @@ class _MyAppState extends State<MyApp> {
 
 
  _MyAppState() {
-   
+   _messageStreamController.listen((message) {
+     setState(() {
+       if (message.notification != null) {
+       } else {
+       }
+     });
+   });
  }
 
   Color primaryColor = Colors.blue;
@@ -230,9 +236,10 @@ class _MyAppState extends State<MyApp> {
          title: 'login',
         theme: theme,
         darkTheme: darkTheme,
-        home: const EADashedBoardScreen(),
+        home: const AuthPage(), 
       ),
     ),),);
   }
 }
+
 
