@@ -190,13 +190,7 @@ class _MyAppState extends State<MyApp> {
 
 
  _MyAppState() {
-   _messageStreamController.listen((message) {
-     setState(() {
-       if (message.notification != null) {
-       } else {
-       }
-     });
-   });
+   
  }
 
   Color primaryColor = Colors.blue;
@@ -241,5 +235,4 @@ class _MyAppState extends State<MyApp> {
     ),),);
   }
 }
-
 
