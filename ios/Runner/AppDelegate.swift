@@ -8,7 +8,7 @@ import Flutter
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         let flutterViewController: FlutterViewController = window?.rootViewController as! FlutterViewController
-        GeneratedPluginRegistrant.register(with: self)
+       // GeneratedPluginRegistrant.register(with: self)
 
         // Your additional setup code...
 
