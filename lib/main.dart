@@ -236,7 +236,7 @@ class _MyAppState extends State<MyApp> {
          title: 'login',
         theme: theme,
         darkTheme: darkTheme,
-        home: const MyAppWithSplash(),
+        home: const AuthPage(),
       ),
     ),),);
   }
