@@ -30,7 +30,7 @@ import UserNotifications
         Messaging.messaging().delegate = self
         
         // Add observer for handling FCM token refresh
-        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(_:)), name: NSNotification.Name.InstanceIDTokenRefresh, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.tokenRefreshNotification(_:)), name: NSNotification.Name.MessagingRegistrationTokenRefreshed, object: nil)
         
         // Initialize Flutter plugins
         GeneratedPluginRegistrant.register(with: self)
@@ -51,16 +51,7 @@ import UserNotifications
     // Connect to FCM
     func connectToFcm() {
         // Disconnect if connected
-        Messaging.messaging().disconnect()
-        
-        // Connect to FCM for token refresh
-        Messaging.messaging().connect { (error) in
-            if let error = error {
-                print("Unable to connect to FCM. \(error)")
-            } else {
-                print("Connected to FCM.")
-            }
-        }
+        Messaging.messaging().shouldEstablishDirectChannel = true
     }
 }
 
