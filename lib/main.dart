@@ -178,7 +178,7 @@ class _MyAppWithSplashState extends State<MyAppWithSplash> {
       future: main(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
-          return const AuthPage(); // Navigate to AuthPage after initialization
+          return const LoginPage(); // Navigate to LoginPage after initialization
         } else {
           return const SplashScreen(); // Show SplashScreen while initializing
         }
@@ -230,7 +230,7 @@ class _MyAppState extends State<MyApp> {
          title: 'login',
         theme: theme,
         darkTheme: darkTheme,
-        home: const AuthPage(),
+        home: const LoginPage(),
       ),
     ),),);
   }
