@@ -30,7 +30,7 @@ dependencies:
 
   flutter:
     sdk: flutter
-    uses-material-design: true  
+    
   sqflite_common_ffi: any
   cupertino_icons: ^1.0.2
   email_validator: ^2.0.1
@@ -59,6 +59,8 @@ dependencies:
   sqflite: ^2.0.3
   video_player: ^2.5.3
   firebase_messaging: ^14.3.0
+flutter:
+  uses-material-design: true  # Move this line to the top-level of the flutter section
 
 dev_dependencies:
   flutter_test:
