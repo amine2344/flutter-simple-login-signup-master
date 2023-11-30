@@ -16,20 +16,8 @@ import 'package:flutter/foundation.dart';
 
 // FlutterFire's Firebase Cloud Messaging plugin
 
-final _messageStreamController = BehaviorSubject<RemoteMessage>();
 
 
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // If you're going to use other Firebase services in the background, such as Firestore,
-  // make sure you call `initializeApp` before using other Firebase services.
-  await Firebase.initializeApp();
-  if (kDebugMode) {
-   print("Handling a background message: ${message.messageId}");
-   print('Message data: ${message.data}');
-   print('Message notification: ${message.notification?.title}');
-   print('Message notification: ${message.notification?.body}');
- }
-}
 
 
 
@@ -45,7 +33,9 @@ void main() async {
 }
 Future<void> initializeOtherClass() async {
   // Perform any initialization tasks here
-  await ListEvents.initialise() ; 
+  await ListEvents.initialise() ;
+  await Firebase.initializeApp();
+
   await Future.delayed(const Duration(seconds: 2)); // Simulated initialization delay
   
   
@@ -114,13 +104,7 @@ class _MyAppState extends State<MyApp> {
 
 
  _MyAppState() {
-   _messageStreamController.listen((message) {
-     setState(() {
-       if (message.notification != null) {
-       } else {
-       }
-     });
-   });
+   
  }
 
   Color primaryColor = Colors.blue;
