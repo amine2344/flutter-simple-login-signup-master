@@ -4,15 +4,28 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
+    
       flutter: stable
       xcode: latest
       cocoapods: default
+     
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.adeelsafdar.loginsignup.loginSignup
+      vars:
+        APP_ID: 6473167966 # <-- Put your APP ID here
+        BUNDLE_ID: com.adeelsafdar.loginsignup.loginSignup
+
     scripts:
+      - name: Build and archive iOS
+        script: flutter build ios --release --allow-provisioning-updates
+
       - name: Get Flutter packages
         script: flutter packages pub get
       - name: Install pods
         script: find . -name "Podfile" -execdir pod install \;
       - name: Flutter build iOS
         script: flutter build ios --release
+        
     artifacts:
       - build/ios/iphoneos/Runner.app
