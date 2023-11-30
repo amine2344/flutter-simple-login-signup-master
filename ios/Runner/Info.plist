@@ -6,7 +6,7 @@
     <string>1046501087671-buj2c74j9sm7nlnrl7u67abtgtekvo6q.apps.googleusercontent.com</string>
     <key>REVERSED_CLIENT_ID</key>
     <string>com.googleusercontent.apps.1046501087671-buj2c74j9sm7nlnrl7u67abtgtekvo6q</string>
-    
+
     <key>CFBundleIdentifier</key>
     <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
     <key>CFBundleDevelopmentRegion</key>
@@ -21,31 +21,35 @@
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>
     <string>$(FLUTTER_BUILD_NAME)</string>
-    <key>CFBundleSignature</key>
-    <string>????</string>
+
+    <!-- You can remove the CFBundleSignature key -->
+    <!-- <key>CFBundleSignature</key>
+    <string>????</string> -->
+
     <key>CFBundleVersion</key>
-    <string>1</string>
+    <string>1.0.0</string>
+
     <key>MinimumOSVersion</key>
     <string>9.0</string>
-<key>LSRequiresIPhoneOS</key>
-	<true/>    
-<key>UILaunchStoryboardName~ipad</key>
-    
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>UILaunchStoryboardName~ipad</key>
     <string>LaunchScreenIPad.storyboard</string>
     <key>UIRequiresFullScreen</key>
     <true/>
     <key>UIRequiresFullScreen~ipad</key>
     <false/>
-    <key>ITSAppUsesNonExemptEncryption</key>
-    <false/>
+    <!-- You can remove the ITSAppUsesNonExemptEncryption key if your app does not use encryption -->
+    <!-- <key>ITSAppUsesNonExemptEncryption</key>
+    <false/> -->
+
     <key>APS Environment</key>
     <string>production</string>
-    
     <key>aps-environment</key>
     <string>production</string>
 
     <key>NSRemoteNotificationUsageDescription</key>
-    <string>We use notifications to make sure when the user accept the event the notification will arrive to the admin of the app.</string>
+    <string>We use notifications to make sure when the user accepts the event the notification will arrive at the admin of the app.</string>
 
     <key>UISupportedInterfaceOrientations</key>
     <array>
@@ -55,14 +59,15 @@
         <string>UIInterfaceOrientationLandscapeRight</string>
     </array>
     <key>UISupportedInterfaceOrientations~ipad</key>
-    	<array>
-    		<string>UIInterfaceOrientationPortrait</string>
-    		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-    		<string>UIInterfaceOrientationLandscapeLeft</string>
-    		<string>UIInterfaceOrientationLandscapeRight</string>
-    	</array>
-    	<key>UIViewControllerBasedStatusBarAppearance</key>
-    	<false/>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
+    <key>UIViewControllerBasedStatusBarAppearance</key>
+    <false/>
+
     <key>NSPhotoLibraryUsageDescription</key>
     <string>We need access to your photo library to select images for sharing with friends.</string>
 
@@ -82,15 +87,15 @@
     <key>STORAGE_BUCKET</key>
     <string>auth-72203.appspot.com</string>
     <key>IS_ADS_ENABLED</key>
-    <false></false>
+    <false/>
     <key>IS_ANALYTICS_ENABLED</key>
-    <false></false>
+    <false/>
     <key>IS_APPINVITE_ENABLED</key>
-    <true></true>
+    <true/>
     <key>IS_GCM_ENABLED</key>
-    <true></true>
+    <true/>
     <key>IS_SIGNIN_ENABLED</key>
-    <true></true>
+    <true/>
     <key>GOOGLE_APP_ID</key>
     <string>1:1046501087671:ios:63ef412c9a34f4d6b83032</string>
 </dict>
