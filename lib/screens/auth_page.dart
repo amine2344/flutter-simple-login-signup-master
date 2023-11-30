@@ -9,7 +9,7 @@ class AuthPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: StreamBuilder(
-        stream: FirebaseAuth.instance.authStateChanges(),
+        stream: Firebase.initializeApp(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             // Add a loading indicator for the initial state
