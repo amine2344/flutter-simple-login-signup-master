@@ -13,17 +13,14 @@ import 'package:login_signup/screens/splash_screen.dart';
 import 'package:login_signup/utils/EADataProvider.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'firebase_options.dart';
-// core Flutter primitives
-import 'package:flutter/foundation.dart';
 class AuthPage extends StatelessWidget {
   const AuthPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StreamBuilder(
-        stream: Firebase.initializeApp(),
+      body: FutureBuilder(
+        future: Firebase.initializeApp(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             // Add a loading indicator for the initial state
