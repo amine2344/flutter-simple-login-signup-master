@@ -1,5 +1,5 @@
-import 'package:login_signup/utils/EAColors.dart';
-import 'package:login_signup/utils/EAConstants.dart';
+import 'package:loginSignup/utils/EAColors.dart';
+import 'package:loginSignup/utils/EAConstants.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 
