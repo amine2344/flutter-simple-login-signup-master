@@ -11,11 +11,11 @@ import 'package:email_validator/email_validator.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:login_signup/components/common/page_heading.dart';
+import 'package:loginSignup/components/common/page_heading.dart';
 
-import 'package:login_signup/components/common/custom_form_button.dart';
-import 'package:login_signup/components/common/custom_input_field.dart';
-import 'package:login_signup/components/login_page.dart';
+import 'package:loginSignup/components/common/custom_form_button.dart';
+import 'package:loginSignup/components/common/custom_input_field.dart';
+import 'package:loginSignup/components/login_page.dart';
 
 class SignupPage extends StatefulWidget {
   final  Function()? onTap;
