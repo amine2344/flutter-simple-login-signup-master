@@ -1,5 +1,5 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+
 import 'package:flutter/material.dart';
 import 'package:login_signup/screens/EADashedBoardScreen.dart';
 import 'package:login_signup/screens/auth_page.dart';
@@ -14,25 +14,7 @@ import 'firebase_options.dart';
 import 'package:flutter/foundation.dart';
 
 
-// FlutterFire's Firebase Cloud Messaging plugin
-import 'package:firebase_messaging/firebase_messaging.dart';
 
-final _messageStreamController = BehaviorSubject<RemoteMessage>();
-
-
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  // If you're going to use other Firebase services in the background, such as Firestore,
-  // make sure you call `initializeApp` before using other Firebase services.
-  await Firebase.initializeApp();
-  print('Handling a background message: ${message.notification?.title}');
-  print('Handling a background message ${message.messageId}');
-  if (kDebugMode) {
-   print("Handling a background message: ${message.messageId}");
-   print('Message data: ${message.data}');
-   print('Message notification: ${message.notification?.title}');
-   print('Message notification: ${message.notification?.body}');
- }
-}
 
 
 
@@ -43,82 +25,28 @@ void main() async {
 
 
   );
-   // TODO: Request permission
-    final messaging = FirebaseMessaging.instance;
-
-final settings = await messaging.requestPermission(
- alert: true,
- announcement: false,
- badge: true,
- carPlay: false,
- criticalAlert: false,
- provisional: false,
- sound: true,
-);
-
- if (kDebugMode) {
-   print('Permission granted: ${settings.authorizationStatus}');
- }
+  
 
  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
     await initializeOtherClass();
 
 // TODO: replace with your own VAPID key
- const vapidKey = "BDF8fXiJSDbqRhbvSSKo1dt2NmmTWr1RkVX2Hkl8pdBl_Svfy55x5ZLrObzZq0wTasTgcmySv3Ro7WBtsrB0kmM";
-// use the registration token to send messages to users from your trusted server environment
- String? token;
 
- if (DefaultFirebaseOptions.currentPlatform == DefaultFirebaseOptions.web) {
-   token = await messaging.getToken(
-     vapidKey: vapidKey,
-   );
- } else {
-   token = await messaging.getToken();
- }
-
- if (kDebugMode) {
-   print('Registration Token=$token');
- }
+  
+  
+  
 
    
  // TODO: Register with FCM
 
 
  // TODO: Set up foreground message handler
- FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-   if (kDebugMode) {
-     print('Handling a foreground message: ${message.messageId}');
-     print('Message data: ${message.data}');
-     print('Message notification: ${message.notification?.title}');
-     print('Message notification: ${message.notification?.body}');
-   }
 
-   _messageStreamController.sink.add(message);
- });
 
- // TODO: Set up background message handler
-  // Configure Firebase Cloud Messaging
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  FirebaseMessaging messagings = FirebaseMessaging.instance;
-
-  // Request permission for displaying notifications
-  await messagings.requestPermission();
   
-  // Obtain the FCM token
-  String? fcmToken = await messagings.getToken();
 
-  // Register a callback for receiving messages
-  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-    // Handle the incoming message
-    print('Received message: ${message.notification?.title}');
-  });
 
-  // Handle any initial notification after the app launch
-  RemoteMessage? initialMessage = await messaging.getInitialMessage();
-  if (initialMessage != null) {
-    // Handle the initial message
-    print('Received initial message: ${initialMessage.notification?.title}');
-  }
+  
 
   runApp(const MyApp());
 
@@ -128,6 +56,12 @@ final settings = await messaging.requestPermission(
 Future<void> initializeOtherClass() async {
   // Perform any initialization tasks here
   await ListEvents.initialise() ; 
+   WidgetsFlutterBinding.ensureInitialized(); 
+  await Firebase.initializeApp(
+    options:  DefaultFirebaseOptions.currentPlatform,
+
+
+  );
   await Future.delayed(Duration(seconds: 2)); // Simulated initialization delay
   
   print('Other class initialized');
@@ -172,18 +106,7 @@ class _MyAppState extends State<MyApp> {
  String _lastMessage = "";
 
  _MyAppState() {
-   _messageStreamController.listen((message) {
-     setState(() {
-       if (message.notification != null) {
-         _lastMessage = 'Received a notification message:'
-             '\nTitle=${message.notification?.title},'
-             '\nBody=${message.notification?.body},'
-             '\nData=${message.data}';
-       } else {
-         _lastMessage = 'Received a data message: ${message.data}';
-       }
-     });
-   });
+   
  }
 
   Color primaryColor = Colors.blue;
