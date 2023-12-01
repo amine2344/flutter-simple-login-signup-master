@@ -2,11 +2,11 @@ import 'package:email_validator/email_validator.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login_signup/components/common/custom_form_button.dart';
-import 'package:login_signup/components/common/page_header.dart';
-import 'package:login_signup/components/common/page_heading.dart';
-import 'package:login_signup/components/common/custom_input_field.dart';
-import 'package:login_signup/components/login_page.dart';
+import 'package:loginSignup/components/common/custom_form_button.dart';
+import 'package:loginSignup/components/common/page_header.dart';
+import 'package:loginSignup/components/common/page_heading.dart';
+import 'package:loginSignup/components/common/custom_input_field.dart';
+import 'package:loginSignup/components/login_page.dart';
 
 class ForgetPasswordPage extends StatefulWidget {
 
