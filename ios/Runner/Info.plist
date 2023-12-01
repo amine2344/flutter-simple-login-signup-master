@@ -13,9 +13,13 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	
 
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+
+	
+	<key>APS Environment</key>
+	<string>development</string> <!-- or 'production' -->
+
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -50,10 +54,7 @@
 
 
 
-    <key>APS Environment</key>
-    <string>production</string>
-    <key>aps-environment</key>
-    <string>production</string>
+
 
     <key>NSRemoteNotificationUsageDescription</key>
     <string>We use notifications to make sure when the user accepts the event the notification will arrive at the admin of the app.</string>
