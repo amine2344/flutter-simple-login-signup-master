@@ -27,7 +27,7 @@ void main() async {
   );
   
 
- FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
+  
     await initializeOtherClass();
 
 // TODO: replace with your own VAPID key
