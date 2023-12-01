@@ -18,7 +18,7 @@
 
 	
 	<key>APS Environment</key>
-	<string>development</string> <!-- or 'production' -->
+	<string>production</string> <!-- or 'production' -->
 
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
