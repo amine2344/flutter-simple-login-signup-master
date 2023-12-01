@@ -1,4 +1,4 @@
-name: login_signup
+name: loginSignup
 description: This is a flutter application for login & signup.
 
 # The following line prevents the package from being accidentally published to
