@@ -1,11 +1,11 @@
   import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
-import 'package:login_signup/screens/EAConnectionScreen.dart';
-import 'package:login_signup/screens/EAIndexScreen.dart';
-import 'package:login_signup/screens/EARewardScreen.dart';
-import 'package:login_signup/utils/EAColors.dart';
-import 'package:login_signup/utils/EAImages.dart';
-import 'package:login_signup/utils/EAapp_widgets.dart';
+import 'package:loginSignup/screens/EAConnectionScreen.dart';
+import 'package:loginSignup/screens/EAIndexScreen.dart';
+import 'package:loginSignup/screens/EARewardScreen.dart';
+import 'package:loginSignup/utils/EAColors.dart';
+import 'package:loginSignup/utils/EAImages.dart';
+import 'package:loginSignup/utils/EAapp_widgets.dart';
 
 class EAProfileTopComponent extends StatefulWidget {
   const EAProfileTopComponent({super.key});
