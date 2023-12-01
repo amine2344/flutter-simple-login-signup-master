@@ -4,10 +4,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 import 'package:email_validator/email_validator.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
@@ -32,10 +31,7 @@ class _SignupPageState extends State<SignupPage> {
   final _signupFormKey = GlobalKey<FormState>();
   String? mtoken = " ";
   
-  late AndroidNotificationChannel channel;
-  late FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
-
-
+  
 
 
   final TextEditingController _emailController = TextEditingController();
@@ -76,16 +72,8 @@ class _SignupPageState extends State<SignupPage> {
 
 
   void getToken() async {
-    await FirebaseMessaging.instance.getToken().then(
-            (token) {
-              setState(() {
-                mtoken = token;
-              });
-
-
-            }
-    );
-  }
+  
+   }
 
 
  
