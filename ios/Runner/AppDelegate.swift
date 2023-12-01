@@ -19,8 +19,7 @@ import UserNotifications
                 print("Notification authorization denied")
             }
         }
-        
-        application.registerForRemoteNotifications()
+
         
         // Configure Firebase (if needed)
         FirebaseApp.configure()
@@ -31,15 +30,3 @@ import UserNotifications
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
-    // Handle the device token for push notifications
-    override func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        print("Device Token: \(token)")
-        // Send the device token to your server if needed
-    }
-    
-    // Handle notification settings
-    override func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("Failed to register for remote notifications with error: \(error.localizedDescription)")
-    }
-}
