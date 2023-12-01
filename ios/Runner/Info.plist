@@ -13,8 +13,7 @@
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<key>CFBundleShortVersionString</key>
-	<string>1.0</string> <!-- Replace with your app version -->
+	
 
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -23,12 +22,12 @@
 	<string>login_signup</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>1.0.1</key>
-	<string>6</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>1.0.0.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
