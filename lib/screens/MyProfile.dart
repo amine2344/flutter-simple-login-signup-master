@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -57,30 +57,10 @@ void _toggleFormVisibility() {
   void initState() {
     super.initState();
     getDocsId();
-    FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
-firebaseMessaging.requestPermission();
-    // Firebase Cloud Messaging Initialization
-  FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
-  FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-    print("Foreground message received: $message");
-  });
-    getToken();
     
-  }
-  // Handling background messages
-Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  print("Background message received: $message");
 }
 
-  void getToken() async {
-      await FirebaseMessaging.instance.getToken().then((token) {
-        print("your token : $token");
-        setState(() {
 
-          mtoken = token;
-        });
-      });
-      }
   
 
    void saveToken(String? mtoken) async {
@@ -121,28 +101,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
           var userData = snapshot.data!.data() as Map<String, dynamic>;
 
             if (userData['admin'] == true ) {
-            print("your token : $mtoken");
-            saveToken(mtoken);
-            // admin page :  
-            void sendNotification(String deviceToken) async {
-  await http.post(
-    Uri.parse('https://fcm.googleapis.com/fcm/send'),
-    headers: <String, String>{
-      'Content-Type': 'application/json',
-      'Authorization': 'key=AIzaSyDAihvXqHu9ua_EscTVQnOFS6YEaeU_ANQ',
-    },
-    body: jsonEncode(
-      <String, dynamic>{
-        'notification': <String, dynamic>{
-          'body': 'This is a notification message',
-          'title': 'Notification Title',
-        },
-        'priority': 'high',
-        'to': deviceToken,
-      },
-    ),
-  );
-} 
+         
             return 
             Center(child: 
             CupertinoButton.filled(
