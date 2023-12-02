@@ -1,12 +1,12 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 
 import 'package:flutter/material.dart';
-import 'package:login_signup/screens/EADashedBoardScreen.dart';
-import 'package:login_signup/screens/auth_page.dart';
+import 'package:loginSignup/screens/EADashedBoardScreen.dart';
+import 'package:loginSignup/screens/auth_page.dart';
 
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
 import 'package:rxdart/rxdart.dart';
 
 import 'firebase_options.dart';
