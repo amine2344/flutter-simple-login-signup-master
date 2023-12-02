@@ -57,11 +57,7 @@ Future<void> initializeOtherClass() async {
   // Perform any initialization tasks here
   await ListEvents.initialise() ; 
    WidgetsFlutterBinding.ensureInitialized(); 
-  await Firebase.initializeApp(
-    options:  DefaultFirebaseOptions.currentPlatform,
 
-
-  );
   await Future.delayed(Duration(seconds: 2)); // Simulated initialization delay
   
   print('Other class initialized');
