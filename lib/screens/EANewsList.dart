@@ -1,6 +1,6 @@
-import 'package:login_signup/screens/EANewsDetailScreen.dart';
-import 'package:login_signup/utils/EAColors.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
+import 'package:loginSignup/screens/EANewsDetailScreen.dart';
+import 'package:loginSignup/utils/EAColors.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 

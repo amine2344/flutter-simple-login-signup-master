@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/MyProfile.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/MyProfile.dart';
 
 
 class EAProfileScreen extends StatefulWidget {

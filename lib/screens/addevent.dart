@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/EventScreen.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/EventScreen.dart';
 
 class AddEventPage extends StatefulWidget {
   final String? name;

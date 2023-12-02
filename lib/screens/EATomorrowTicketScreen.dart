@@ -1,4 +1,4 @@
-import 'package:login_signup/screens/PurchaseMoreScreen.dart';
+import 'package:loginSignup/screens/PurchaseMoreScreen.dart';
 import 'package:flutter/material.dart';
 
 class EATomorrowTicketScreen extends StatefulWidget {

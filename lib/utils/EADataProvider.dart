@@ -1,14 +1,14 @@
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:login_signup/model/EAActivityModel.dart';
-import 'package:login_signup/model/EAEventListModel.dart';
-import 'package:login_signup/model/EAForYouModel.dart';
-import 'package:login_signup/model/EAInboxModel.dart';
-import 'package:login_signup/model/EAReviewModel.dart';
-import 'package:login_signup/model/EATicketModel.dart';
-import 'package:login_signup/model/EAWalkThroughModel.dart';
-import 'package:login_signup/utils/EAConstants.dart';
+import 'package:loginSignup/model/EAActivityModel.dart';
+import 'package:loginSignup/model/EAEventListModel.dart';
+import 'package:loginSignup/model/EAForYouModel.dart';
+import 'package:loginSignup/model/EAInboxModel.dart';
+import 'package:loginSignup/model/EAReviewModel.dart';
+import 'package:loginSignup/model/EATicketModel.dart';
+import 'package:loginSignup/model/EAWalkThroughModel.dart';
+import 'package:loginSignup/utils/EAConstants.dart';
 import 'package:flutter/material.dart';
 import 'EAImages.dart';
 

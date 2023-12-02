@@ -1,6 +1,6 @@
-import 'package:login_signup/components/PurchaseButton.dart';
-import 'package:login_signup/utils/EAImages.dart';
-import 'package:login_signup/utils/EAapp_widgets.dart';
+import 'package:loginSignup/components/PurchaseButton.dart';
+import 'package:loginSignup/utils/EAImages.dart';
+import 'package:loginSignup/utils/EAapp_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 

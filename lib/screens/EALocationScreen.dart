@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:login_signup/screens/PurchaseMoreScreen.dart';
-import 'package:login_signup/utils/EAapp_widgets.dart';
+import 'package:loginSignup/screens/PurchaseMoreScreen.dart';
+import 'package:loginSignup/utils/EAapp_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nb_utils/nb_utils.dart';

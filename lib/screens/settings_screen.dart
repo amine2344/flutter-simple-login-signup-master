@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/settings_ui.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/settings_ui.dart';
 
 
 class Settings_i extends StatefulWidget {

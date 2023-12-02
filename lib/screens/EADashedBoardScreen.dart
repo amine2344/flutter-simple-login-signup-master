@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/EAHomeScreen.dart';
-import 'package:login_signup/screens/settings_screen.dart';
-import 'package:login_signup/screens/EAProfileScreen.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/EAHomeScreen.dart';
+import 'package:loginSignup/screens/settings_screen.dart';
+import 'package:loginSignup/screens/EAProfileScreen.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
 
 
 class EADashedBoardScreen extends StatefulWidget {

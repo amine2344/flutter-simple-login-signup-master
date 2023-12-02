@@ -1,9 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/cupertino.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/EAForYouTabScreen.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/EAForYouTabScreen.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
 
 
 class EAHomeScreen extends StatefulWidget {

@@ -1,7 +1,7 @@
-import 'package:login_signup/model/EAForYouModel.dart';
-import 'package:login_signup/utils/EAConstants.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
-import 'package:login_signup/utils/EAapp_widgets.dart';
+import 'package:loginSignup/model/EAForYouModel.dart';
+import 'package:loginSignup/utils/EAConstants.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
+import 'package:loginSignup/utils/EAapp_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:nb_utils/nb_utils.dart';

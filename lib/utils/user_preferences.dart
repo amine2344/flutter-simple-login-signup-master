@@ -1,4 +1,4 @@
-import 'package:login_signup/model/user.dart';
+import 'package:loginSignup/model/user.dart';
 
 class UserPreferences {
   static const myUser = Users(

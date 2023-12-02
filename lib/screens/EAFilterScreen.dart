@@ -1,7 +1,7 @@
-import 'package:login_signup/screens/EALocationScreen.dart';
-import 'package:login_signup/utils/EAColors.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
-import 'package:login_signup/utils/EAapp_widgets.dart';
+import 'package:loginSignup/screens/EALocationScreen.dart';
+import 'package:loginSignup/utils/EAColors.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
+import 'package:loginSignup/utils/EAapp_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 

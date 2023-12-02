@@ -1,6 +1,6 @@
-import 'package:login_signup/model/EAForYouModel.dart';
-import 'package:login_signup/screens/PurchaseMoreScreen.dart';
-import 'package:login_signup/utils/EADataProvider.dart';
+import 'package:loginSignup/model/EAForYouModel.dart';
+import 'package:loginSignup/screens/PurchaseMoreScreen.dart';
+import 'package:loginSignup/utils/EADataProvider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

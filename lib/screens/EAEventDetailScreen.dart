@@ -3,9 +3,9 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
-import 'package:login_signup/main.dart';
-import 'package:login_signup/screens/cupertino_images.dart';
-import 'package:login_signup/utils/EAColors.dart';
+import 'package:loginSignup/main.dart';
+import 'package:loginSignup/screens/cupertino_images.dart';
+import 'package:loginSignup/utils/EAColors.dart';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:http/http.dart' as http;
@@ -27,6 +27,36 @@ class EAEventDetailScreen extends StatefulWidget {
   _EAEventDetailScreenState createState() => _EAEventDetailScreenState();
 }
 
+Future<void> sendNotification(String deviceToken, String title, String body) async {
+  final url = Uri.parse('https://fcm.googleapis.com/v1/projects/{auth-72203}/messages:send');
+  const serverKey = 'be01c77dc2ae371acaf63571b0241948461a997e';
+ try{
+ await http.post(
+        Uri.parse('https://fcm.googleapis.com/v1/projects/{auth-72203}/messages:send'),
+        headers: <String, String>{
+          'Content-Type': 'application/json',
+          'Authorization': 'key=$serverKey',
+        },
+        body: jsonEncode(
+          <String, dynamic>{
+            'notification': <String, dynamic>{
+              'body': body,
+              'title': title
+            },
+            'priority': 'high',
+            'data': <String, dynamic>{
+              'click_action': 'FLUTTER_NOTIFICATION_CLICK',
+              'id': '1',
+              'status': 'done'
+            },
+            "to": deviceToken,
+          },
+        ),
+      );
+    } catch (e) {
+    }
+      
+}
 class _EAEventDetailScreenState extends State<EAEventDetailScreen> {
   PageController pageController = PageController(initialPage: 0);
   int currentIndexPage = 0;
@@ -260,8 +290,8 @@ const Icon(Icons.map),
       child: const Text('Accept', style: TextStyle(color: CupertinoColors.white, fontSize: 7)),
       onPressed: () {
         _launchURL();
-
-                // Action when "Accept" is pressed
+        sendNotification("eQS6SOGDEFwAr1J-ypkAyI:APA91bEcMVs3MP-OUIogo2nqL9VIGFfQE-zULwQOTIJTBdf0ZJ-gZglWoUtAUtXaN3feQzcdjVVQxbdY_XMSvOyov92n7FHGXmWry5FEm4VNymO2MWKqGaRqMydv2H7bssKN8ga839YX", "Event accepted", "check user");
+        // Action when "Accept" is pressed
       },
     ),
   ],
