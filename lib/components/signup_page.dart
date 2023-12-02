@@ -126,10 +126,10 @@
                   
                   Container(
                     decoration: const BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("images/back1.png"),
-              fit: BoxFit.cover,
-            ),
+          //  image: DecorationImage(
+            //  image: AssetImage("images/back1.png"),
+            //  fit: BoxFit.cover,
+            //),
           ),
                     child: Column(
                       children: [
