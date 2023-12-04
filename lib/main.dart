@@ -21,7 +21,13 @@ import 'package:flutter/foundation.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
   await Firebase.initializeApp(
-    options:  DefaultFirebaseOptions.currentPlatform,
+    options:  FirebaseOptions(
+    apiKey: 'AIzaSyAw77vzKOpBg8Z285RxIc67Y2gByDfs_wg',
+    appId: '1:1046501087671:ios:63ef412c9a34f4d6b83032',
+    messagingSenderId: '1046501087671',
+    projectId: 'auth-72203',
+    storageBucket: 'auth-72203.appspot.com',
+  ),
 
 
   );
