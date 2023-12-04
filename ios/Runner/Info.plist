@@ -1,12 +1,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    <key>CLIENT_ID</key>
-    <string>1046501087671-buj2c74j9sm7nlnrl7u67abtgtekvo6q.apps.googleusercontent.com</string>
-    <key>REVERSED_CLIENT_ID</key>
-    <string>com.googleusercontent.apps.1046501087671-buj2c74j9sm7nlnrl7u67abtgtekvo6q</string>
-<key>CFBundleDevelopmentRegion</key>
+	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+
 	<key>CFBundleDisplayName</key>
 	<string>Ravish Events</string>
 	<key>CFBundleExecutable</key>
@@ -22,15 +21,17 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>login_signup</string>
+	<string>loginSignup</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+
+
 	<key>CFBundleVersion</key>
-	<string>1.0.0.9</string>
+	<string>1.0.0.10</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 
@@ -38,7 +39,8 @@
 
 
 
-
+<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 
     <key>MinimumOSVersion</key>
     <string>9.0</string>
@@ -55,10 +57,7 @@
 
 
 
-    <key>NSRemoteNotificationUsageDescription</key>
-    <string>We use notifications to make sure when the user accepts the event the notification will arrive at the admin of the app.</string>
-
-  <key>UISupportedInterfaceOrientations</key>
+	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
@@ -80,37 +79,6 @@
 	<string>To take your profile image</string>
 	<key>NSCameraUsageDescription</key>
     <string>To choose your profile image</string>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Used to capture audio for image picker plugin</string>
-
-
-
-
-    <key>NSLocationWhenInUseUsageDescription</key>
-    <string>We need your location to show nearby events and provide a personalized experience.</string>
- <key>API_KEY</key>
-    <string>AIzaSyAw77vzKOpBg8Z285RxIc67Y2gByDfs_wg</string>
-    <key>GCM_SENDER_ID</key>
-    <string>1046501087671</string>
-    <key>PLIST_VERSION</key>
-    <string>1</string>
-    <key>BUNDLE_ID</key>
-    <string>com.adeelsafdar.loginsignup.loginSignup</string>
-    <key>PROJECT_ID</key>
-    <string>auth-72203</string>
-    <key>STORAGE_BUCKET</key>
-    <string>auth-72203.appspot.com</string>
-    <key>IS_ADS_ENABLED</key>
-    <false></false>
-    <key>IS_ANALYTICS_ENABLED</key>
-    <false></false>
-    <key>IS_APPINVITE_ENABLED</key>
-    <true></true>
-    <key>IS_GCM_ENABLED</key>
-    <true></true>
-    <key>IS_SIGNIN_ENABLED</key>
-    <true></true>
-    <key>GOOGLE_APP_ID</key>
-    <string>1:1046501087671:ios:63ef412c9a34f4d6b83032</string>
+	
 </dict>
 </plist>
