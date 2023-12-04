@@ -22,11 +22,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized(); 
   await Firebase.initializeApp(
     options:  FirebaseOptions(
-    apiKey: 'AIzaSyAw77vzKOpBg8Z285RxIc67Y2gByDfs_wg',
-    appId: '1:1046501087671:ios:63ef412c9a34f4d6b83032',
-    messagingSenderId: '1046501087671',
-    projectId: 'auth-72203',
-    storageBucket: 'auth-72203.appspot.com',
+    apiKey: 'AIzaSyCigTkFC6BmldxMUdY2m1yZTWI4-0G2BP8',
+    appId: '1:833130301180:ios:cb070dc1bec4748d04f979',
+    messagingSenderId: '833130301180',
+    projectId: 'ravish-ae358',
+    storageBucket: 'ravish-ae358.appspot.com',
+    iosBundleId: 'com.adeelsafdar.loginSignup',
   ),
 
 
