@@ -44,38 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBFoMW342QwmgHorttjOcKYF3fN8O2jqA4',
-    appId: '1:1046501087671:web:597e98dab5e4bdf7b83032',
-    messagingSenderId: '1046501087671',
-    projectId: 'auth-72203',
-    authDomain: 'auth-72203.firebaseapp.com',
-    storageBucket: 'auth-72203.appspot.com',
-    measurementId: 'G-WJTKQ4KQ1E',
+    apiKey: 'AIzaSyCG4V3HQi5fsWG3mC7jSJqxEvokMxm6GIk',
+    appId: '1:833130301180:web:da754f179024d1a304f979',
+    messagingSenderId: '833130301180',
+    projectId: 'ravish-ae358',
+    authDomain: 'ravish-ae358.firebaseapp.com',
+    storageBucket: 'ravish-ae358.appspot.com',
+    measurementId: 'G-0T2XEJ8JST',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDkPSHAs0sPPx-2iAl_APzquIQXF0X9Geo',
-    appId: '1:1046501087671:android:3c51208c8fec93f6b83032',
-    messagingSenderId: '1046501087671',
-    projectId: 'auth-72203',
-    storageBucket: 'auth-72203.appspot.com',
+    apiKey: 'AIzaSyBoidxeTKZ3uWjPGWIPyrUnjziLujqI3q0',
+    appId: '1:833130301180:android:8c2ec321bfe2fb7104f979',
+    messagingSenderId: '833130301180',
+    projectId: 'ravish-ae358',
+    storageBucket: 'ravish-ae358.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAw77vzKOpBg8Z285RxIc67Y2gByDfs_wg',
-    appId: '1:1046501087671:ios:63ef412c9a34f4d6b83032',
-    messagingSenderId: '1046501087671',
-    projectId: 'auth-72203',
-    storageBucket: 'auth-72203.appspot.com',
-    iosBundleId: 'com.adeelsafdar.loginsignup.loginSignup',
+    apiKey: 'AIzaSyCigTkFC6BmldxMUdY2m1yZTWI4-0G2BP8',
+    appId: '1:833130301180:ios:cb070dc1bec4748d04f979',
+    messagingSenderId: '833130301180',
+    projectId: 'ravish-ae358',
+    storageBucket: 'ravish-ae358.appspot.com',
+    iosBundleId: 'com.adeelsafdar.loginSignup',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyAw77vzKOpBg8Z285RxIc67Y2gByDfs_wg',
-    appId: '1:1046501087671:ios:63ef412c9a34f4d6b83032',
-    messagingSenderId: '1046501087671',
-    projectId: 'auth-72203',
-    storageBucket: 'auth-72203.appspot.com',
+    apiKey: 'AIzaSyCigTkFC6BmldxMUdY2m1yZTWI4-0G2BP8',
+    appId: '1:833130301180:ios:0b74bb990bb7fca104f979',
+    messagingSenderId: '833130301180',
+    projectId: 'ravish-ae358',
+    storageBucket: 'ravish-ae358.appspot.com',
     iosBundleId: 'com.adeelsafdar.loginsignup.loginSignup',
   );
 }
